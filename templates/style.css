@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: #0066ff;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-color), #ff5c5c);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-box {
+    background: linear-gradient(to right, #e8f4ff, #f0f8ff);
+    border-left: 5px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+}
+
+.info-box i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .input-group {
+        flex-direction: row;
+    }
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+}
+
+.input-group button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .input-group button {
+        margin-top: 0;
+        margin-left: 1rem;
+        border-radius: var(--border-radius);
+    }
+}
+
+.input-group button:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.api-key-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+}
+
+.api-key-group label {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.api-key-group input[type="text"] {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    margin-bottom: 0.5rem;
+}
+
+.api-key-group input[type="text"]:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.1);
+}
+
+.api-key-group small {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.api-key-group small a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.toggle-api {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.toggle-api:hover {
+    color: #0051cc;
+}
+
+.toggle-api i {
+    margin-right: 0.5rem;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.result h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.result h2 i {
+    margin-right: 0.75rem;
+}
+
+.result p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.error {
+    background-color: #fff2f2;
+    border-left: 5px solid #ff3333;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+}
+
+.error i {
+    color: #ff3333;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.loading {
+    text-align: center;
+    margin: 2rem 0;
+    display: none;
+}
+
+.loading p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .result, .error {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+}

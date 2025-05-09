@@ -1,0 +1,5 @@
+youtube-transcript-api>=0.6.0
+transformers>=4.25.1
+torch>=1.13.1
+flask>=2.0.1
+google-generativeai>=0.3.0 
